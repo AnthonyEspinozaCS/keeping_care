@@ -766,7 +766,14 @@ li h4 {
 }
 
 .right-side {
+  position: relative;
   padding-inline: 2rem;
+}
+
+.left-side__p {
+  position: relative;
+  width: 135px;
+  height: 160px;
 }
 
 .right-side p {
@@ -774,6 +781,12 @@ li h4 {
 
   font-size: var(--fs-small);
   text-align: left;
+}
+
+@media (max-width: 640px) {
+  .left-side__p.d-block {
+    display: none;
+  }
 }
 
 /* .board__member::after {
@@ -789,7 +802,7 @@ li h4 {
   background-color: var(--blue);
 } */
 
-.board__member img {
+.board__member--portrait {
   width: 150px;
   height: 150px;
   margin-inline: auto;
@@ -814,6 +827,11 @@ li h4 {
 .read-more-button:hover {
   color: var(--dark);
   background-color: var(--green-2);
+}
+
+.board__member .mnp {
+  height: 50px;
+  object-fit: contain;
 }
 
 footer {
