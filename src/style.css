@@ -320,9 +320,18 @@ body {
   font-family: var(--ff-serif);
 
   color: white;
-  background: linear-gradient(145deg, rgba(0, 11, 79, 1) 0%, rgba(0, 11, 79, 1) 40%, rgba(1, 0, 6, 1) 100%);
+  background: var(--green);
   border: 0;
-  border-radius: 20px;
+  border-radius: 5px;
+  transition: 300ms;
+
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: black;
+
+  background-color: var(--green-2);
 }
 
 .btn--x {
@@ -832,6 +841,49 @@ li h4 {
 .board__member .mnp {
   height: 50px;
   object-fit: contain;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+  min-height: 40vh;
+}
+
+.contact-form--half {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.contact-form--half input {
+  padding: 1rem 1rem;
+  border: 3px solid var(--green);
+  border-radius: 5px;
+}
+
+.contact-form--full {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.contact-form--full textarea {
+  max-width: 100%;
+  min-height: 150px;
+  padding: 1rem;
+
+  border: 3px solid var(--green);
+  border-radius: 5px;
+}
+
+@media (min-width: 768px) {
+  .contact-form--half {
+    width: calc(50% - 1rem);
+  }
 }
 
 footer {
