@@ -10,7 +10,8 @@ window.onload = function () {
     event.preventDefault();
     // generate a five digit number for the contact_number variable
     this.contact_number.value = (Math.random() * 100000) | 0;
-    this.client = "aespinoza.cs@gmail.com";
+    this.client = "markdelaney@keepingcare.ca";
+    this.client_name = "Mark";
     // these IDs from the previous steps
     emailjs.sendForm("contact_service", "contact_form", this).then(
       function () {
