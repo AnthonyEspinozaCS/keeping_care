@@ -14,8 +14,8 @@ window.onload = function () {
     this.client_name.value = "Mark";
     // these IDs from the previous steps
     emailjs.sendForm("contact_service", "contact_form", this).then(
-      function () {
-        console.log("SUCCESS!");
+      function (response) {
+        console.log("SUCCESS!", response.status, response.text);
       },
       function (error) {
         console.log("FAILED...", error);
