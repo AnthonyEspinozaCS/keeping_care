@@ -14,7 +14,7 @@ window.onload = function () {
     console.log("hello");
     setTimeout(3000);
     // these IDs from the previous steps
-    emailjs.sendForm("contact_service", "contact_form", this).then(
+    emailjs.sendForm("contact_service", "contact_form", "#contact-form").then(
       function (response) {
         console.log("SUCCESS!", response.status, response.text);
       },
