@@ -8,18 +8,15 @@ const public_key = "ECZnDfndQHxfORbGd";
 window.onload = function () {
   document.getElementById("contact-form").addEventListener("submit", function (event) {
     event.preventDefault();
-    // generate a five digit number for the contact_number variable
     this.client.value = "markdelaney@keepingcare.ca";
     this.client_name.value = "Mark";
-    console.log("hello");
-    setTimeout(3000);
     // these IDs from the previous steps
-    emailjs.sendForm("contact_service", "contact_form", "#contact-form").then(
-      function (response) {
-        console.log("SUCCESS!", response.status, response.text);
+    emailjs.sendForm("contact_service", "contact_form", this).then(
+      () => {
+        alert("Your form has been submitted successfully!!");
       },
-      function (error) {
-        console.log("FAILED...", error);
+      (error) => {
+        alert(JSON.stringify(error));
       }
     );
   });
