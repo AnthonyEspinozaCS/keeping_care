@@ -19,5 +19,6 @@ window.onload = function () {
         alert(JSON.stringify(error));
       }
     );
+    this.reset();
   });
 };
